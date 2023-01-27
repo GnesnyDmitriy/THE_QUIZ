@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorOnSecondary">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kids_stargazing"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart">
+        </ImageView>
+
+        <Button
+            android:id="@+id/final_button"
+            style="@style/ButtonOnMainScreen"
+            android:layout_width="450dp"
+            android:layout_height="450dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="193dp"
+            android:text="@string/on_main_screen"    >
+        </Button>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            style="@style/text_style_on_main_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/final_text_1"
+            android:textAllCaps="true"
+            android:textSize="50sp">
+        </TextView>
+
+        <TextView
+            style="@style/text_style_on_main_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/final_text_2"
+            android:textSize="50sp"
+            android:textAllCaps="true">
+        </TextView>
+
+        <TextView
+            style="@style/text_style_on_main_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/final_text_3"
+            android:textAllCaps="true"
+            android:textSize="50sp">
+        </TextView>
+        <TextView
+            style="@style/text_style_on_main_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_screen_text3"
+            android:textAllCaps="true"
+            android:textSize="50sp">
+        </TextView>
+    </LinearLayout>
+</FrameLayout>
