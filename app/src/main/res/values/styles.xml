@@ -1,34 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="ButtonOnMainScreen" parent="Widget.MaterialComponents.Button.UnelevatedButton">
-        <item name="android:background">@drawable/main_screen_button_ripple</item>
-        <item name="backgroundTint">@null</item>
-        <item name="android:fontFamily">@font/ys_display_heavy</item>
-        <item name="android:textSize">60sp</item>
-    </style>
 
     <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:background">@drawable/standard_ripple</item>
         <item name="backgroundTint">@null</item>
         <item name="android:fontFamily">@font/ys_display_regular</item>
-        <item name="android:textSize">40sp</item>
-        <item name="android:layout_margin">30dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">10dp</item>
 
     </style>
 
 
-    <style name="text_style_on_main_screen">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">0dp</item>
-        <item name="android:layout_weight">1</item>
+    <style name="text_style_on_main_screen1">
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_marginBottom">5dp</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:fontFamily">@font/ys_display_bold</item>
-        <item name="android:textSize">60sp</item>
+        <item name="android:textSize">25sp</item>
     </style>
+
+    <style name="text_style_on_main_screen2">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/ys_display_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="main_image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="question" parent="text_style_on_main_screen1">
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+    <style name="question_image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">110dp</item>
+    </style>
+
+
 
 </resources>
