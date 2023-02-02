@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?attr/colorOnSecondary">
+    android:background="@color/black">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="bottom"
-        android:background="?attr/colorPrimary">
+        android:background="@color/purple_500">
 
         <TextView
             style="@style/text_style_on_main_screen1"
