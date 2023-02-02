@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.TransitionDrawable
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -137,7 +138,7 @@ class QuizActivity : AppCompatActivity() {
                     answer1.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer1)
-                    Handler().postDelayed({
+                    Handler(Looper.getMainLooper()).postDelayed({
                         showNextScreen(i++, images, allAnswers, questions)
                     }, 600)
 
@@ -150,7 +151,7 @@ class QuizActivity : AppCompatActivity() {
                     answer2.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer2)
-                    Handler().postDelayed({
+                    Handler(Looper.getMainLooper()).postDelayed({
                         showNextScreen(i++, images, allAnswers, questions)
                     }, 600)
                 } else
@@ -162,7 +163,7 @@ class QuizActivity : AppCompatActivity() {
                     answer3.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer3)
-                    Handler().postDelayed({
+                    Handler(Looper.getMainLooper()).postDelayed({
                         showNextScreen(i++, images, allAnswers, questions)
                     }, 600)
                 } else
@@ -174,7 +175,7 @@ class QuizActivity : AppCompatActivity() {
                     answer4.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer4)
-                    Handler().postDelayed({
+                    Handler(Looper.getMainLooper()).postDelayed({
                         showNextScreen(i++, images, allAnswers, questions)
                     }, 600)
                 } else
@@ -235,13 +236,13 @@ class QuizActivity : AppCompatActivity() {
         val drawable: Drawable = b.background
         if (drawable is TransitionDrawable) {
             drawable.startTransition(200)
-            Handler().postDelayed({
+            Handler(Looper.getMainLooper()).postDelayed({
                 drawable.reverseTransition(200)
             }, 200)
-            Handler().postDelayed({
+            Handler(Looper.getMainLooper()).postDelayed({
                 drawable.startTransition(200)
             }, 400)
-            Handler().postDelayed({
+            Handler(Looper.getMainLooper()).postDelayed({
                 drawable.reverseTransition(200)
             }, 900)
         }
@@ -252,7 +253,7 @@ class QuizActivity : AppCompatActivity() {
         val drawable: Drawable = b.background
         if (drawable is TransitionDrawable) {
             drawable.startTransition(200)
-            Handler().postDelayed({
+            Handler(Looper.getMainLooper()).postDelayed({
                 drawable.reverseTransition(200)
             }, 400)
         }
