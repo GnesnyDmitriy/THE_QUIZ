@@ -5,7 +5,7 @@
     <string name="main_screen_text3">Космос ждет любознательных!</string>
     <string name="main_button_text">ПОЕХАЛИ!</string>
     <string name="question_1">Какое строение Солнечной системы?</string>
-    <string name="question_1_answer_1">геоценрическое</string>
+    <string name="question_1_answer_1">геоцентрическое</string>
     <string name="question_1_answer_2">пироцентрическое</string>
     <string name="question_1_answer_3">гелиоцентрическое</string>
     <string name="question_1_answer_4">космологическое</string>
