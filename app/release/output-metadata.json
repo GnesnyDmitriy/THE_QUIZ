@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.practicum.quiz_version_3",
+  "applicationId": "com.practicum.quiz_version_4",
   "variantName": "release",
   "elements": [
     {
@@ -13,7 +13,7 @@
       "attributes": [],
       "versionCode": 1,
       "versionName": "1.0",
-      "outputFile": "app-release.apk"
+      "outputFile": "app-release_v4.apk"
     }
   ],
   "elementType": "File"

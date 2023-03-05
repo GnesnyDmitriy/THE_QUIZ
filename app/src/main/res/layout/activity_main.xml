@@ -1,52 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/black">
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/main_button"
+        style="@style/main_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="top|center">
-
-        <ImageView
-            style="@style/main_image"
-            android:id="@+id/main_button"
-            android:src="@drawable/main_screen"/>
-
-    </FrameLayout>
+        android:layout_alignParentTop="true"
+        android:src="@drawable/main_screen" />
 
     <LinearLayout
+        android:id="@+id/main_text"
+        style="@style/main_text_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="bottom"
-        android:background="@color/purple_500">
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_500"
+        android:orientation="vertical">
 
         <TextView
             style="@style/text_style_on_main_screen1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="true"
-            android:text="@string/main_screen_text1">
-        </TextView>
+            android:text="@string/main_screen_text1"
+            android:textAllCaps="true" />
 
         <TextView
             style="@style/text_style_on_main_screen2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="true"
-            android:text="@string/main_screen_text2">
-        </TextView>
+            android:text="@string/main_screen_text2"
+            android:textAllCaps="true" />
 
         <TextView
             style="@style/text_style_on_main_screen1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="true"
-            android:text="@string/main_screen_text3">
-        </TextView>
+            android:text="@string/main_screen_text3"
+            android:textAllCaps="true" />
     </LinearLayout>
-</FrameLayout>
+</RelativeLayout>
+
