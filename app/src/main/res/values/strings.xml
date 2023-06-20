@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">THE QUIZ</string>
     <string name="main_screen_text1">Проверь свои знания и внимательность!</string>
-    <string name="main_screen_text2">Ответы на вопросы викторины можно найти в этом зале.</string>
+    <string name="main_screen_text2">Обещаем, что это будет увлекательное путешествие.</string>
     <string name="main_screen_text3">Космос ждет любознательных!</string>
     <string name="main_button_text">ПОЕХАЛИ!</string>
     <string name="question_1">Какое строение Солнечной системы?</string>

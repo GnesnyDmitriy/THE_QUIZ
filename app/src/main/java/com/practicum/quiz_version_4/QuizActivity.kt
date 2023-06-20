@@ -21,6 +21,8 @@ class QuizActivity : AppCompatActivity() {
 
         hideSystemUI()
 
+        val dataBase = DataBase(this)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
@@ -106,35 +108,13 @@ class QuizActivity : AppCompatActivity() {
             )
         )
 
-        val rightAnswers = arrayOf(
-            R.string.question_1_answer_3,
-            R.string.question_2_answer_2,
-            R.string.question_3_answer_1,
-            R.string.question_4_answer_2,
-            R.string.question_5_answer_4,
-            R.string.question_6_answer_4,
-            R.string.question_7_answer_1,
-            R.string.question_8_answer_4,
-            R.string.question_9_answer_2,
-            R.string.question_10_answer_2
-        )
-        val questions = arrayOf(
-            R.string.question_1,
-            R.string.question_2,
-            R.string.question_3,
-            R.string.question_4,
-            R.string.question_5,
-            R.string.question_6,
-            R.string.question_7,
-            R.string.question_8,
-            R.string.question_9,
-            R.string.question_10
-        )
+        val rightAnswers = dataBase.readData("rightAnswers_key", arrayOf(""))
+        val questions = dataBase.readData("questions_key", arrayOf(""))
 
         for (q in questions) {
 
             answer1.setOnClickListener {
-                if (getText(rightAnswers[i - 1]) == answer1.text) {
+                if (rightAnswers[i - 1] == answer1.text) {
                     answer1.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer1)
@@ -147,7 +127,7 @@ class QuizActivity : AppCompatActivity() {
             }
 
             answer2.setOnClickListener {
-                if (getText(rightAnswers[i - 1]) == answer2.text) {
+                if (rightAnswers[i - 1] == answer2.text) {
                     answer2.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer2)
@@ -159,7 +139,7 @@ class QuizActivity : AppCompatActivity() {
             }
 
             answer3.setOnClickListener {
-                if (getText(rightAnswers[i - 1]) == answer3.text) {
+                if (rightAnswers[i - 1] == answer3.text) {
                     answer3.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer3)
@@ -171,7 +151,7 @@ class QuizActivity : AppCompatActivity() {
             }
 
             answer4.setOnClickListener {
-                if (getText(rightAnswers[i - 1]) == answer4.text) {
+                if (rightAnswers[i - 1] == answer4.text) {
                     answer4.background =
                         ContextCompat.getDrawable(this, R.drawable.transition_drawable_correct)
                     startCorrectColorAnimation(answer4)
@@ -188,7 +168,7 @@ class QuizActivity : AppCompatActivity() {
         i: Int,
         images: Array<Int>,
         allAnswers: Map<Int, Array<Int>>,
-        questions: Array<Int>
+        questions: Array<String>
     ) {
         val image = findViewById<ImageView>(R.id.image)
         val question = findViewById<TextView>(R.id.question)
@@ -213,7 +193,7 @@ class QuizActivity : AppCompatActivity() {
         i: Int,
         images: Array<Int>,
         allAnswers: Map<Int, Array<Int>>,
-        questions: Array<Int>
+        questions: Array<String>
     ) {
         try {
 
